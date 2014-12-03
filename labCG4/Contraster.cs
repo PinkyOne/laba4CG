@@ -80,40 +80,38 @@ namespace labCG4
             for (var a = 0; a < picture.Width - 1; a++)
                 for (var b = 0; b < picture.Height - 1; b++)
                 {
-                    var br = (int)(255 * picture.GetPixel(a, b).GetBrightness());
+                    var br = picture.GetPixel(a, b).R;
                     if (gMax < br) gMax = br;
                     if (gMin > br) gMin = br;
                 }
             for (var a = 0; a < picture.Width - 1; a++)
                 for (var b = 0; b < picture.Height - 1; b++)
                 {
-                    var f = (int)(255 * picture.GetPixel(a, b).GetBrightness());
+                    var f = picture.GetPixel(a, b).R;
                     if (fMax != fMin && f != 0)
                     {
                         //var g = ((f - fMin) / (fMax - fMin)) * (gMax - gMin) + gMin;
                        // var g = ((fMax - gMin) + gMin * fMax - gMax * fMin) * f / (fMax - fMin);
                         var g = (gMax - gMin) * f / (fMax - fMin) + (fMax * gMin - fMin * gMax) / (fMax - fMin);
-                        double newR = picture.GetPixel(a, b).R;
-                        double newG = picture.GetPixel(a, b).G;
-                        double newB = picture.GetPixel(a, b).B;
-                        double value = f - g;
-
-                        if ((newR + value) > 255) newR = 255;
-                        else if ((newR + value) < 0) newR = 0;
-                        else newR += value;
-
-                        if ((newG + value) > 255) newG = 255;
-                        else if ((newG + value) < 0) newG = 0;
-                        else newG += value;
-
-                        if ((newB + value) > 255) newB = 255;
-                        else if ((newB + value) < 0) newB = 0;
-                        else newB += value;
-                        
-                        picture.SetPixel(a, b, Color.FromArgb((int)newR, (int)newG, (int)newB));
+                        if (g < 0) g = 0;
+                        if (g > 255) g = 255;
+                        picture.SetPixel(a, b, Color.FromArgb(g, g, g));
                     }
                 }
 
+            return picture;
+        }
+
+        public static Image GoToGray(Image image)
+        {
+            var picture = new Bitmap(image);
+            for (var a = 0; a < picture.Width - 1; a++)
+                for (var b = 0; b < picture.Height - 1; b++)
+                {
+                    var g = 0.3 * picture.GetPixel(a, b).R + 0.59 * picture.GetPixel(a, b).G
+                            + 0.11 * picture.GetPixel(a, b).B;
+                    picture.SetPixel(a, b, Color.FromArgb((int)g, (int)g, (int)g));
+                }
             return picture;
         }
     }

@@ -7,3 +7,12 @@ C:\Users\Alex\Dropbox\comp_graphic\labCG4\labCG4\bin\Debug\labCG4.exe
 C:\Users\Alex\Dropbox\comp_graphic\labCG4\labCG4\bin\Debug\labCG4.pdb
 C:\Users\Alex\Dropbox\comp_graphic\labCG4\labCG4\obj\Debug\labCG4.exe
 C:\Users\Alex\Dropbox\comp_graphic\labCG4\labCG4\obj\Debug\labCG4.pdb
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\bin\Debug\labCG4.exe.config
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.exe
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.pdb
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\bin\Debug\labCG4.exe
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\bin\Debug\labCG4.pdb
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.Form1.resources
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\laba4CG\labCG4\obj\Debug\labCG4.csproj.GenerateResource.Cache
